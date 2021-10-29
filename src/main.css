@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  background: #181921;
+  color: #FFFFFF;
+}
+
+::selection {
+  background: #FF265A;
+  color: #FFFFFF;
+}
+
+a {
+  color: #4A8EFF;
+  text-decoration: none;
+}
+
+.channel,
+.tag {
+  color: #FF265A;
+}
