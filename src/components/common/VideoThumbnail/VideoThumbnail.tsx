@@ -36,7 +36,9 @@ const VideoThumbnail = (props: IVideoThumbnailProps): JSX.Element => {
       </ThumbnailStatistics>
       <ThumbnailInfo>
         <ThumbnailTitle>{snippet.title}</ThumbnailTitle>
-        <ThumbnailChannel>{snippet.channelTitle}</ThumbnailChannel>
+        <ThumbnailChannel to={`/channel/${snippet.channelId}`}>
+          {snippet.channelTitle}
+        </ThumbnailChannel>
       </ThumbnailInfo>
     </ThumbnailContainer>
   );

@@ -4,12 +4,17 @@ const getChannelData = (state) => state.channel;
 
 const channelSelector = createSelector([getChannelData], (channel) => {
   const { channelData } = channel;
-  const channelSnippet = channelData?.snippet;
-  const channelStatistics = channelData?.statistics;
+  const snippet = channelData?.snippet;
+  const statistics = channelData?.statistics;
+  // const brandingSettings = channelData?.brandingSettings;
 
   return {
-    channelThumbnails: channelSnippet?.thumbnails,
-    channelSubsCount: channelStatistics?.subscriberCount,
+    channelTitle: snippet?.title,
+    channelDescription: snippet?.description,
+    channelThumbnails: snippet?.thumbnails,
+    channelSubsCount: statistics?.subscriberCount,
+    // channelColor: brandingSettings?.channel?.profileColor,
+    // channelBanner: brandingSettings?.image?.bannerExternalUrl,
   };
 });
 

@@ -1,3 +1,4 @@
+import kinds from "@/utils/enums/kinds";
 import { createSelector } from "reselect";
 
 const getSearchData = (state) => state.search;
@@ -9,11 +10,16 @@ export const searchSelector = createSelector([getSearchData], (search) => {
     ? {
         results: searchData.map((result) => ({
           kind: result.id.kind,
-          url: `/video/${result.id.videoId}`,
+          url:
+            result.id.kind === kinds.VIDEO_KIND
+              ? `/video/${result.id.videoId}`
+              : `/channel/${result.id.channelId}`,
           title: result.snippet.title,
           description: result.snippet.description,
           channelTitle: result.snippet.channelTitle,
           img: result.snippet.thumbnails.medium,
+          channelId: result.snippet.channelId,
+          videoId: result.id.videoId,
         })),
       }
     : { results: null };

@@ -9,7 +9,8 @@ export default interface ISnippet {
     medium: IThumbnailsKey;
     high: IThumbnailsKey;
   };
-  channelTitle: string;
   tags: string[];
   categoryId: string;
+  channelId: string;
+  channelTitle: string;
 }

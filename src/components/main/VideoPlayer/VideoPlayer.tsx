@@ -11,7 +11,6 @@ import IVideoPlayerProps from "./types";
 const VideoPlayer = memo((props: IVideoPlayerProps) => {
   const { iframe } = props;
   const device = useDevice();
-  console.log({ device });
 
   const playerSize =
     device === devices.DEVICE_SMALL

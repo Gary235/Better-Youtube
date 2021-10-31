@@ -7,6 +7,12 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "lib": [
+      "ES5",
+      "ES2015",
+      "DOM",
+      "ScriptHost"
+    ]
   },
 }

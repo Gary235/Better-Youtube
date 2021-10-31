@@ -1,4 +1,5 @@
 export const actionTypes = {
+  CHANNEL_FINALIZE: "CHANNEL_FINALIZE",
   GET_CHANNEL_DATA: "GET_CHANNEL_DATA",
   GET_CHANNEL_DATA_ERROR: "GET_CHANNEL_DATA_ERROR",
   GET_CHANNEL_DATA_SUCCESS: "GET_CHANNEL_DATA_SUCCESS",
@@ -17,5 +18,8 @@ export const channelActions = {
   getChannelDataSuccess: (payload) => ({
     type: actionTypes.GET_CHANNEL_DATA_SUCCESS,
     payload,
+  }),
+  channelFinalize: () => ({
+    type: actionTypes.CHANNEL_FINALIZE,
   }),
 };

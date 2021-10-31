@@ -1,4 +1,5 @@
 import colors from "@/utils/enums/colors";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const VideoContainer = styled.div`
@@ -53,9 +54,14 @@ export const ChannelInfo = styled.div`
   margin-right: auto;
 `;
 
-export const ChannelTitle = styled.h2`
+export const ChannelTitle = styled(Link)`
   font-size: 0.9em;
   font-weight: 500;
+  color: ${colors.white};
+
+  &:hover {
+    color: ${colors.awesomeRed};
+  }
 `;
 
 export const ChannelSecondary = styled.p`

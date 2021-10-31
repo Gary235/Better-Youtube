@@ -27,6 +27,7 @@ const Video = (props: IVideoProps) => {
     title,
     description,
     channelTitle,
+    channelId,
     viewCount,
     embedPlayer,
     channelThumbnails,
@@ -52,7 +53,9 @@ const Video = (props: IVideoProps) => {
         <ChannelContainer>
           <ChannelProfilePicture src={channelThumbnails?.medium?.url} />
           <ChannelInfo>
-            <ChannelTitle>{channelTitle}</ChannelTitle>
+            <ChannelTitle to={`/channel/${channelId}`}>
+              {channelTitle}
+            </ChannelTitle>
             <ChannelSecondary>{channelSubsCount} subscribers</ChannelSecondary>
           </ChannelInfo>
           <OutlinedButtonComponent text="Subscribe" />

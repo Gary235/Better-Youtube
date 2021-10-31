@@ -3,8 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
-  background: #181921;
   color: #FFFFFF;
+}
+
+body {
+  background: #181921;  
 }
 
 ::selection {

@@ -40,7 +40,7 @@ export const ThumbnailTitle = styled.h3`
   background: transparent;
 `;
 
-export const ThumbnailChannel = styled.p`
+export const ThumbnailChannel = styled(Link)`
   padding: 0.5em 0 0;
   font-size: 0.8em;
   color: ${colors.metallicSilver};
@@ -48,6 +48,11 @@ export const ThumbnailChannel = styled.p`
   overflow: hidden;
   background: transparent;
   text-overflow: ellipsis;
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${colors.awesomeRed};
+  }
 `;
 
 export const ThumbnailStatistics = styled.div`

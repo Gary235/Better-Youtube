@@ -11,6 +11,7 @@ const videoSelector = createSelector([getVideoData], (video) => {
   return {
     title: snippet?.title,
     description: snippet?.description,
+    channelId: snippet?.channelId,
     channelTitle: snippet?.channelTitle,
     viewCount: statistics?.viewCount,
     embedPlayer: player?.embedHtml,

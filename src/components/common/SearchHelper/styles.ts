@@ -13,6 +13,7 @@ export const SearchHelperContainer = styled.div`
   left: 0;
   right: 0;
   bottom: -0.75em;
+  z-index: 10;
 `;
 
 export const SearchHelperList = styled.ul`

@@ -1,5 +1,5 @@
-import ISearchVideo from "@/types/search-item";
+import ISearchItem from "@/types/search-item";
 
 export default interface ISearchProps {
-  results: ISearchVideo[];
+  results: ISearchItem[];
 }
