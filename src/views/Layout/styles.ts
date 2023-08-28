@@ -5,4 +5,6 @@ export const LayoutContainer = styled.main`
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 100px;
 `;
